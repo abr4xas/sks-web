@@ -14,7 +14,7 @@ body, html {
 .logo{
     padding: 100px 0px;
     color: #F8F8F8;
-    background: url("http://ironsummitmedia.github.io/startbootstrap-landing-page/img/banner-bg.jpg") no-repeat scroll center center / cover transparent;  
+    background: url("../img/banner-bg.jpg") no-repeat scroll center center / cover transparent;  
 }
 
 h1,h2,h3,h4,h5{
