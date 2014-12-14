@@ -1,0 +1,108 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+.logo{
+    padding: 100px 0px;
+    color: #F8F8F8;
+    background: url("http://ironsummitmedia.github.io/startbootstrap-landing-page/img/banner-bg.jpg") no-repeat scroll center center / cover transparent;  
+}
+
+h1,h2,h3,h4,h5{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-weight: 400; 
+}
+p, label,fieldset{
+    font-family: 'Abel', sans-serif;
+}
+a{
+    color: #fff;  
+}
+a:hover{
+    color: #000;
+    text-decoration: none;
+}
+.center{
+    text-align: center;
+}
+.content{
+    width: 50%; 
+    margin: 0 auto; 
+}
+fieldset{
+    border: none;
+}
+.checkbox {
+    min-height: 27px;
+}
+.btn{
+    color: #000;
+    background-color: #FFF;
+    border-color: #000;
+
+}
+footer {
+    width: 100%; 
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #2980b9;    
+}
+#info p{
+    margin: 0 auto; 
+    color: #fff;
+    width: 75%;
+}
+input[type=text]{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    width:100%;
+    padding: 15px;
+    border-radius:5px;
+    border:1px solid #7ac9b7;
+}
+button[type=submit]{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width:50%;
+    padding: 15px;
+    border-radius:5px;
+    border:none;
+    background-color: #4180C5;
+    color: aliceblue;
+    font-size:15px;
+    cursor:pointer;
+}
+button:hover{
+    background-color: black;
+}
+textarea{
+    width:100%;
+    padding: 15px;
+    margin-top: 10px;
+    border:1px solid #7ac9b7;
+    border-radius:5px;
+    margin-bottom: 20px;
+    resize:none;
+}
+input[type=text]:focus,textarea:focus {
+    border-color: #4697e4;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+ /* Styles */
+        .content{
+        width: 95%; 
+        margin: 0 auto; 
+    }    
+}

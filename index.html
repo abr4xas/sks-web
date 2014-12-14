@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SKS Search Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    
+  <header class="logo">
+      <h1 class="center"> SKS OpenPGP Keyserver <span> @your.site.name</span></h1>  
+    <nav>
+
+    </nav>
+  </header>
+  <main class="content" role="main">
+    <h2>Extract a key</h2>
+    <p> You can extract a key by typing in some words that appear in the userid
+       of the key you're looking for, or by typing in the keyid in hex format ("0x...")</p>
+
+    <article>
+       <form action="http://your.site.name:11371/pks/lookup" id="buscar" method="get"> 
+        <fieldset checked="true"> <legend>Search for a public key</legend>       
+        <label for="search">Search String:</label>   
+        <input type="text" name="search" id="search" size="40" placeholder="Search String">   
+         <br>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="fingerprint"> Show PGP "fingerprints" for keys
+    </label>
+   </div>  
+<div class="checkbox">           
+  <label>
+      <input type="checkbox" name="hash"> Show SKS full-key hashes
+    </label>      
+  </div>          
+<div class="radio">
+    <p>Search for keys: </p>
+  <label>
+    <input type="radio" name="op" value="index">
+    get regular index of matching keys
+  </label>
+</div>
+<div class="radio">
+
+  <label>
+    <input type="radio" name="op" value="vindex" CHECKED>
+    get <b>verbose</b> index of matching keys
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="op" value="get"> retrieve ascii-armored keys 
+  </label>
+</div>
+<div class="radio">
+  <label>
+    <input type="radio" name="op" value="hget"> retrieve keys by full-key hash
+  </label>
+</div>           
+                
+         <button class="btn" type="submit" value="Submit this key to the keyserver!">Submit</button>
+           </fieldset>
+       </form>
+    </article>
+    <article class="sendkey">
+       <h2>Submit a key</h2>
+       <p>You can submit a key by simply pasting in the ASCII-armored version 
+       of     your key and clicking on submit. </p>                 
+       <form action="http://your.site.name:11371/pks/add" method="post">
+         <textarea name="keytext" rows="20" cols="66"></textarea>               
+         <button class="btn" type="submit" value="Submit this key to the keyserver!">Submit</button>             
+       </form>      
+    </article>  
+
+  </main>
+      <footer id="info">
+          <p><a href="http://www.nongnu.org/sks/" target="_blank">SKS is a new OpenPGP keyserver</a>. </p>     
+      
+      </footer>
+
+  </body>
+</html>
